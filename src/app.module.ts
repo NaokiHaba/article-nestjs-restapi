@@ -11,6 +11,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       type: 'sqlite',
       database: 'data/dev.sqlite',
       logging: true,
+      entities: ['dist/**/entities/**/*.entity.js'],
+      migrations: ['dist/**/migrations/**/*.js'],
     }),
   ],
   controllers: [AppController],
